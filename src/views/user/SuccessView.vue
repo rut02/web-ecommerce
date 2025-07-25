@@ -29,7 +29,8 @@ onMounted(async () => {
 
 <template>
   <UserLayout>
-    <div v-if="orderData" class="border border-base-300 shadow-xl p-8 max-w-2xl mb-4">
+    <div class="flex justify-center">
+   <div v-if="orderData" class="border border-base-300 shadow-xl p-8 max-w-2xl mb-4">
       <div>
         <div class="text-2xl font-bold">Your order is successful</div>
         <div>Order Number: {{ orderData.doc_no }}</div>
@@ -88,6 +89,8 @@ onMounted(async () => {
     </div>
 
     <div v-else class="p-8">Loading order data...</div>
+    </div>
+ 
   </UserLayout>
 </template>
 

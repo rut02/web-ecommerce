@@ -4,6 +4,7 @@ import { onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useAdminUserStore } from '@/stores/admin/user'
 import Table from '@/components/Table.vue'
+import edit from '@/components/icons/edit.vue'
 
 const adminUserStore = useAdminUserStore()
 const loading = ref(true)
@@ -59,7 +60,7 @@ onMounted(() => {
   <td>
     <div class="flex gap-2">
       <RouterLink :to="{ name: 'admin-user-update', params: { id: user._id } }">
-        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-outline btn-sm"> <font-awesome-icon icon="fa-solid fa-pen-to-square" class="text-blue-600 text-lg" /></button>
       </RouterLink>
       <!-- <button :class="user.status === 'active' ? 'btn btn-error' : 'btn btn-success'" @click="changeStatus(user._id)">
         {{ user.status === 'active' ? 'Disable' : 'Enable' }}
